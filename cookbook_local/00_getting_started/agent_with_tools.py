@@ -1,18 +1,18 @@
 """
-Agent with Tools - Finance Agent
+Agent with Tools - Finance Agent | 带有工具的代理 - 财经代理
 =================================
-Your first Agno agent: a data-driven financial analyst that retrieves
-market data, computes key metrics, and delivers concise insights.
+Your first Agno agent: a data-driven financial analyst that retrieves | 你的第一个 Agno 代理：一个数据驱动的财务分析师，负责获取
+market data, computes key metrics, and delivers concise insights. | 市场数据、计算关键指标并提供简明见解。
 
-This example shows how to give an agent tools to interact with external
-data sources. The agent uses YFinanceTools to fetch real-time market data.
+This example shows how to give an agent tools to interact with external | 本示例展示了如何为代理提供与外部数据源交互的工具。
+data sources. The agent uses YFinanceTools to fetch real-time market data. | 该代理使用 YFinanceTools 获取实时市场数据。
 
-Example prompts to try:
-- "What's the current price of AAPL?"
-- "Compare NVDA and AMD — which looks stronger?"
-- "Give me a quick investment brief on Microsoft"
-- "What's Tesla's P/E ratio and how does it compare to the industry?"
-- "Show me the key metrics for the FAANG stocks"
+Example prompts to try: | 尝试示例提示：
+- "What's the current price of AAPL?" | “AAPL 的当前价格是多少？”
+- "Compare NVDA and AMD — which looks stronger?" | “比较 NVDA 和 AMD — 哪一个看起来更强？”
+- "Give me a quick investment brief on Microsoft" | “给我一份关于微软的快速投资简报”
+- "What's Tesla's P/E ratio and how does it compare to the industry?" | “特斯拉的市盈率是多少，与行业相比如何？”
+- "Show me the key metrics for the FAANG stocks" | “向我展示 FAANG 股票的关键指标”
 """
 
 from agno.agent import Agent
@@ -20,7 +20,7 @@ from agno.models.google import Gemini
 from agno.tools.yfinance import YFinanceTools
 
 # ============================================================================
-# Agent Instructions
+# Agent Instructions | 代理指令
 # ============================================================================
 instructions = """\
 You are a Finance Agent — a data-driven analyst who retrieves market data,
@@ -55,7 +55,7 @@ computes key ratios, and produces concise, decision-ready insights.
 """
 
 # ============================================================================
-# Create the Agent
+# Create the Agent | 创建代理
 # ============================================================================
 agent_with_tools = Agent(
     name="Agent with Tools",
@@ -67,7 +67,7 @@ agent_with_tools = Agent(
 )
 
 # ============================================================================
-# Run the Agent
+# Run the Agent | 运行代理
 # ============================================================================
 if __name__ == "__main__":
     agent_with_tools.print_response(
@@ -75,23 +75,23 @@ if __name__ == "__main__":
     )
 
 # ============================================================================
-# More Examples
+# More Examples | 更多示例
 # ============================================================================
 """
-Try these prompts:
+Try these prompts: | 尝试这些提示：
 
-1. Single Stock Analysis
+1. Single Stock Analysis | 单只股票分析
    "What's Apple's current valuation? Is it expensive?"
 
-2. Comparison
+2. Comparison | 比较
    "Compare Google and Microsoft as investments"
 
-3. Sector Overview
+3. Sector Overview | 行业概览
    "Show me key metrics for the top AI stocks: NVDA, AMD, GOOGL, MSFT"
 
-4. Quick Check
+4. Quick Check | 快速检查
    "What's Tesla trading at today?"
 
-5. Deep Dive
+5. Deep Dive | 深入研究
    "Break down Amazon's financials — revenue, margins, and growth"
 """

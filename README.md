@@ -9,12 +9,11 @@ https://github.com/agno-agi/agno
 
 ## Setup
 
-env
+使用uv部署环境
 
+windows
 ```
-mamba create -n agno python=3.11 -y
-
-mamba activate agno
-
-pip install -r requirements.txt
+uv venv .demoenv --python 3.12
+.demoenv\Scripts\activate
+uv pip install -r requirements.txt
 ```
